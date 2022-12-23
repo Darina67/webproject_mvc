@@ -20,9 +20,9 @@
     <header class="header">
         <nav class="nav">
             <ul class="nav-list">
-                <li class="nav-list__item"></li>
-                <li class="nav-list__item"></li>
-                <li class="nav-list__item"></li>
+                <li class="nav-list__item"><a href="/cabinet/products">Таблица 2</a></li>
+                <li class="nav-list__item"><a href="/cabinet/gallery">Галерея</a></li>
+                <li class="nav-list__item"><a href="/cabinet/logout">Выйти</a></li>
             </ul>
         </nav>
     </header>
@@ -49,8 +49,6 @@
                                 echo "<td>" . $value['phone'] . "</td>";
                                 echo "<td>" . $value['country'] . "</td>";
                                 echo "<td>" . $value['status'] . "</td>";
-
-
                                 echo "</tr>";
                             } ?>
                         </tbody>

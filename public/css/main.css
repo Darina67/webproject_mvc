@@ -7,16 +7,37 @@ body {
   width: 100%;
   margin: 0 auto;
 }
+.title {
+  text-align: center;
+  font-size: 24px;
+}
 form {
   background-color: #e5e5e5;
   margin-top: 50px;
-  max-width: 250px;
   width: 100%;
   padding: 20px;
   border: 1px solid #e5e5e5;
   border-radius: 5px;
 }
 .login-form__title {
+  text-align: center;
+}
+form.signin-form {
+  max-width: 250px;
+}
+form.adddata-form {
+  max-width: 450px;
+  display: flex;
+  justify-content: center;
+}
+.adddata-form {
+  padding: 20px;
+}
+.adddata-form__item {
+  padding: 10px;
+  display: grid;
+}
+.adddata-form__title {
   text-align: center;
 }
 .form-btn {
@@ -40,4 +61,27 @@ form {
 section.section.authorization {
   display: flex;
   justify-content: center;
+}
+.gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+img {
+  object-fit: cover;
+  margin-top: 10px;
+  max-width: 650px;
+  height: 450px;
+}
+.row.row--add {
+  display: flex;
+  justify-content: center;
+}
+.form-btn {
+  text-align: center;
+}
+.adddata-form__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
