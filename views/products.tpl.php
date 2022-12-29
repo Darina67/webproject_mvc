@@ -1,3 +1,6 @@
+<?
+var_dump($pageData);
+?>
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -34,6 +37,9 @@
             <div>
                 <div role="tabpanel" class="tab-pane fade in active" id="example2-tab1">
                     <table id="example2-tab1-dt" class="table table-striped table-bordered table-condensed" cellspacing="0" width="100%">
+                        <?php if (!empty($pageData['registerMsg'])) { ?>
+                            <p> <?php echo $pageData['registerMsg']; ?> </p>
+                        <?php } ?>
                         <h2>Таблица №2</h2>
                         <thead>
                             <tr>
@@ -42,6 +48,7 @@
                                 <th>Телефон</th>
                                 <th>Страна</th>
                                 <th>Статус</th>
+                                <th>Действие</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -52,6 +59,7 @@
                                 echo "<td>" . $value['phone'] . "</td>";
                                 echo "<td>" . $value['country'] . "</td>";
                                 echo "<td>" . $value['status'] . "</td>";
+                                echo "<td></td>";
                                 echo "</tr>";
                             } ?>
                         </tbody>
@@ -61,12 +69,9 @@
         </div>
         <div class="row row--add">
             <form method="post" class="adddata-form">
-                <?php if (!empty($pageData['registerMsg'])) : ?>
-                    <p> <?php echo $pageData['registerMsg']; ?> </p>
-                <?php endif; ?>
+                <input type="hidden" name="action" value="addData">
                 <div class="adddata-form__title">
                     <h2>Добавить данные</h2>
-                    <input type="hidden" name="action" value="addData">
                     <div class="adddata-form__container">
                         <div class="adddata-form__item">
                             <label for="surname">Фамилия</label>

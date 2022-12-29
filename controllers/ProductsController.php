@@ -39,7 +39,9 @@ class ProductsController extends Controller
             $newCountry = $_POST['country'];
             $newStatus = $_POST['status'];
             $this->model->addNewData($newSurname, $newSite, $newPhone, $newCountry, $newStatus);
+            $this->pageData['registerMsg'] = "Данные успешно добавлены";
             // header("Location: /cabinet/gallery");
+            return true;
         } else {
             $this->pageData['registerMsg'] = "Вы заполнили не все поля";
             return false;
